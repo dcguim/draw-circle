@@ -13,8 +13,16 @@ build () {
         -t python .
 }
 run() {
-    docker run -it  --name crx_interview_python python
+    echo "running the interview solution ..."
+    docker run  -t --name crx_interview_python python
+#   docker ps
+#   echo "waiting 5 seconds to render the circle in the container ..."
+    sleep 3[s]
+#   echo "fetching the png ..."
+    docker cp crx_interview_python:/usr/src/app/circle.png .
+    open circle.png
 }
 
 build "$1" "$2" "$3" "$4" "$5" "$6"
 run
+
