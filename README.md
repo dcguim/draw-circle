@@ -18,7 +18,7 @@ If the command is recognized, than this machine will suffice.
 # 3. Running the program
 The execution of this program will run inside a docker container which means, that
 there is no need to install additional libraries, nor will any libraries will be installed
-on your machine.
+on your machine. Nevertheless, it is required that the docker client/desktop is running.
 
 To run the program to draw the circle run the following command:
 `sh run-crx-python.sh <radius> <thickness> <center_coord_x> <center_coord_y> <height> <width>`
