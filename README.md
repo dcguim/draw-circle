@@ -25,12 +25,12 @@ To run the program to draw the circle run the following command:
 `sh run-crx-python.sh <radius> <thickness> <center_coord_x> <center_coord_y> <height> <width>`
 
 where:
-  - <rad>: Radius of the circle in pixel
-  - <thickness>: Thickness of the circle in pixel
-  - <center_coord_x>: x coordinate of the center of the circle in pixel
-  - <center_coord_y>: y coordinate of the center of the circle in pixel
-  - <height>: height of the image in pixel
-  - <width>: width of the circle in pixel
+  - < radius > : Radius of the circle in pixel
+  - < thickness >: Thickness of the circle in pixel
+  - < center_coord_x >: x coordinate of the center of the circle in pixel
+  - < center_coord_y >: y coordinate of the center of the circle in pixel
+  - < height >: height of the image in pixel
+  - < width >: width of the circle in pixel
 
 A `circle.png` should be accessible on the same directory the command was ran.
 
