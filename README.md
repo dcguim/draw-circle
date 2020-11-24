@@ -1,34 +1,42 @@
-Task:
-  - Write a program in python that takes the following inputs and then outputs
-  an image of a black circle on a white background in png.
+# 1. Introduction
 
-Inputs:
-  - Radius of the circle in pixel: r
-  - Thickness of the circle in pixel: d
-  - Center of the circle in pixel coordinate: x, y
-  - Size of the image in pixel: h, w
+This solution was designed to be easily ran by anyone with access to a Linux
+computer and a Docker installation. The task consists in writing a python
+program that takes a few inputs and then outputs an image of a
+black circle on a white background as a png.
 
-Outputs:
-  - circle.png
+# 2. Setup
 
-Additional considerations:
-  - The input will be given such that the circle is fully contained in the
-    image.
-  - Simple console input / output is sufficient.
+## requirements
+    - docker version: 17.12.0+
+    - terminal access
+    - linux OS
+    - internet access
+To make sure your linux distribution is compatible, run `xdpyinfo` in your terminal.
+If the command is recognized, than this machine will suffice.
 
-Hint:
-  - Feel free to use external libraries to do everything else except for the
-    function to draw the circle.
-  - It goes without saying that we are looking beyond simply just a correct
-    solution.
+# 3. Running the program
+The execution of this program will run inside a docker container which means, that
+there is no need to install additional libraries, nor will any libraries will be installed
+on your machine.
 
-Deliverables:
-  - Provide the solution in a package that can used / executed by a non-IT
-    personel.
-  - Provide comments on the space / time complexity of the function used to
-    draw the circle.
+To run the program to draw the circle run the following command:
+`sh run-crx-python.sh <radius> <thickness> <center_coord_x> <center_coord_y> <height> <width>`
 
-Evaluation:
-  - quality of code
-  - breath and depth of the knowledge in programming concepts
-  - accessibility / maintainability of solution
+where:
+  - <rad>: Radius of the circle in pixel
+  - <thickness>: Thickness of the circle in pixel
+  - <center_coord_x>: x coordinate of the center of the circle in pixel
+  - <center_coord_y>: y coordinate of the center of the circle in pixel
+  - <height>: height of the image in pixel
+  - <width>: width of the circle in pixel
+
+A `circle.png` should be accessible on the same directory the command was ran.
+
+# 4. Removing the container
+To stop and remove the container and to delete the `circle.png` output simply run:
+
+`sh clean.sh`
+
+Notice that before running the `run-crx-python.sh` script cleaning the environment
+might be necessary.

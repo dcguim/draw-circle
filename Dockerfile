@@ -12,7 +12,7 @@ ENV thick=$thick_arg
 ARG centx_arg
 ENV centx=$centx_arg
 ARG centy_arg
-ENV centy=$centx_arg
+ENV centy=$centy_arg
 ARG height_arg
 ENV height=$height_arg
 ARG width_arg
